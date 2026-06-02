@@ -16,6 +16,24 @@ XIAO ESP32S3 SENSE は、XIAO ESP32S3に、以下の機能が追加されてい�
 ・マイクの音声をSDカードに録音（WAVファイル）、再生<br>
 ・インターネットラジオに接続・再生<br>
 紆余曲折はあったが、上記の機能をほぼ同時に実現するための構成を以下に示す。
+<p>
+<a href="https://www.switch-science.com/products/8969">This program utilizes all the features of the Seeed Studio XIAO ESP32S3 SENSE</a>.<br>
+The XIAO ESP32S3 SENSE adds the following features to the XIAO ESP32S3:<br>
+・Camera<br>
+・Microphone<br>
+・SD drive<br>
+It also features external interfaces such as I2C, I2S, and SPI.<br>
+We sought to demonstrate what challenges arise when using these features simultaneously and whether they can be resolved.<br>
+First, we will list the features we implemented.<br>
+・Display function (SH1106)<br>
+・Control of DSP radio (<a href="https://www.aitendo.com/product/4797">RDA5807FP</a>)<br>
+・Recording (WAV files) and playback of DSP radio output to an SD card<br>
+・Recording camera images to an SD card (JPG files) and displaying them (in a browser) <br>
+・Streaming camera images for display (in a browser) <br>
+・Recording microphone audio to an SD card (WAV files) and playing it back <br>
+・Connecting to and playing Internet radio <br>
+Although there were some twists and turns along the way, the configuration for implementing the above functions nearly simultaneously is shown below.
+</p>
 <p><img src="./xiao_esp32s3_sense_all_func_fig1.png" width="860" height="560"><br>
 </p>
 WAVファイルを再生するDACには、PCM5102のモジュールを利用している。<br>
