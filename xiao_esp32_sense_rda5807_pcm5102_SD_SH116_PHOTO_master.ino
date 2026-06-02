@@ -1555,7 +1555,7 @@ void loop()
       s->set_ae_level(s, 2);  // max level 
       s->set_brightness(s, 1);  // max-1 level
       s->set_contrast(s, 1);  // max-1 level
-      sprintf(filename, "%s%d.jpg", wave_filename_t, wav_fcount);
+      sprintf(filename, "%s%03d.jpg", wave_filename_t, wav_fcount); // 3 digit
       wav_fcount++;
       preferences.putInt("wavf_no", wav_fcount);
       photo_save(filename);
@@ -1744,7 +1744,7 @@ void loop()
         // write SD
         if (!WAVE_HDR_write) {
           // write wave file header
-          sprintf(wave_filename, "%s%d.wav", wave_filename_t, wav_fcount);
+          sprintf(wave_filename, "%s%03d.wav", wave_filename_t, wav_fcount); // 3 digit
           wav_fcount++;
           preferences.putInt("wavf_no", wav_fcount);
           file = SD.open(wave_filename, FILE_WRITE);
